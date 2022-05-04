@@ -1,11 +1,8 @@
 <template>
 
-<div>
+<div class="background">
     <div class="grid">
-        <h2>
-            --> Content goes here 
-        </h2>
-
+      
    </div>
 
     <section class="info-box">
@@ -63,10 +60,14 @@ export default {
 @import '../style/generals';
 
 .grid{
+    background-image: url(../assets/images/jumbotron.jpg);
+    filter: brightness(50%) blur(2px);
+    height: 400px;
     background-color: $bg-grid;
-    background-size: 100%;
-    color: $bg-active;
+    background-size: cover;
+    background-position: center center;
 }
+
 .info-box{
     position: relative;
     z-index: 1000;
