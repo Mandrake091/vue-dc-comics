@@ -190,7 +190,7 @@ footer>img{
   z-index: 0;
   right: 200px;
   top: -70px;
-  height: 500px;
+  height: 450px;
   position: absolute;
 }
 div>img{
