@@ -9,10 +9,15 @@
     <li v-for="(item, index) in lists" :key ='index'>
       {{item.testo}}
     </li>
+    <ul>
     <h3>shop</h3>
     <li>Shop DC</li>
-    <li>Shop DC Collectibles</li>
+    <li>Shop DC Collectibles</li>  
+    </ul>
   </ul>
+
+    
+
   <ul>
      <h3>dc</h3>
     <li>Terms Of Use</li>
@@ -113,27 +118,12 @@ export default {
           active: false
         },
         {
-          testo:"collectibles",
-          link:"",
-          active: false
-        },
-        {
           testo:"videos",
           link:"",
           active: false
         },
         {
-          testo:"fans",
-          link:"",
-          active: false
-        },
-        {
           testo:"news",
-          link:"",
-          active: false
-        },
-        {
-          testo:"shop",
           link:"",
           active: false
         }
@@ -159,7 +149,7 @@ article{
   display: flex;
   width: $width;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 button{
   margin: 25px 25px 25px  0;
@@ -189,14 +179,18 @@ section{
 footer>img{
   z-index: 0;
   right: 200px;
-  top: -70px;
-  height: 450px;
+  top: -100px;
+  height: 500px;
   position: absolute;
 }
 div>img{
   float: left;
-  }
+}
+ul{
+  padding: 10px 0;
+}
 h3{
+  padding-bottom: 5px;
   text-transform: uppercase;
   color: $font-white;
 }
@@ -204,9 +198,6 @@ h3:nth-child(2){
   color: $bg-active;
 }
 
-ul{
-  
-}
 li{
   font-size: $small-font-size;
   padding: 3px 0;
