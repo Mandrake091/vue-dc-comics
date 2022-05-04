@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'AppHeader',
   data(){
@@ -87,7 +88,7 @@ header{
   margin: 0 auto;
   font-weight:600;
   font-size: $main-font-size;
-  height: $line-height-header;
+  height: $line-height;
 }
 ul{
   float: right;
@@ -95,13 +96,12 @@ ul{
 li{
   padding: 0 15px;
   text-transform: uppercase ;
-  line-height: $line-height-header;
+  line-height: $line-height;
   list-style: none;
   float: left;
 }
 img{
-
-  margin: 10px 10px;
+  margin: 15px 0;
   height: 50px;
   float: left;
 }

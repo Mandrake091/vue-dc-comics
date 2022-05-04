@@ -2,8 +2,7 @@
 
   <div id="app">
     <div class="container">
-
-   
+      
       <header>
         <app-header/> 
       </header>

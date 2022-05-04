@@ -68,26 +68,28 @@ export default {
     color: $bg-active;
 }
 .info-box{
-    height: 150px;
+    position: relative;
+    z-index: 1000;
+    height: 125px;
     background-color: $bg-active;
     margin: 0 auto;
 }
 li>img{
     vertical-align: middle;
-    height: 50px;
+    height: 35px;
 }
 ul{
     width: $width;
     margin: 0 auto;
 }
 h2{
-    padding: 50px;
+    line-height: $line-height;
     width: $width;
     margin: 0 auto;
 }
 li{
     width: calc(100% / 5);
-    line-height: 150px;
+    line-height: 125px;
     list-style-type: none;
     float: left;
 }
