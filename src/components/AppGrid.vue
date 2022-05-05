@@ -3,7 +3,7 @@
     <div class="grid ">
         <app-card v-for="(card, index) in items" :thumb="card.thumb" :series="card.series" :type="card.type" :key="index"/>
     </div> 
-    <button class="btn m-">load more</button> 
+    <button class="btn m-4">load more</button> 
  </div>  
 </template>
 
