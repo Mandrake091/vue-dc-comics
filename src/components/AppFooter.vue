@@ -137,10 +137,10 @@ button{
 }
 section{
   justify-content: space-between;
-    align-items: center;
-    display: flex;
-    width: $width;
-    margin: 0 auto;
+  align-items: center;
+  display: flex;
+  width: $width;
+  margin: 0 auto;
 }
 .follow{
   align-items: center;
@@ -149,6 +149,7 @@ section{
   color: $bg-active;
 }
 .follow>h3{
+  font-size: $main-font-size;
   color: $bg-active;
 }
 
@@ -164,6 +165,9 @@ div>img{
 }
 ul{
   padding: 10px 0;
+}
+ul>h3{
+    font-size: $main-font-size;
 }
 h3{
   padding-bottom: 5px;
