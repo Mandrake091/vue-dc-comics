@@ -1,7 +1,7 @@
 <template>
      <div>
         <img :src="thumb" :alt="type">
-        <h3>{{series}}</h3>
+        <p>{{series}}</p>
     </div>
 </template>
 
@@ -16,6 +16,8 @@ export default {
 @import '../style/variables';
 @import '../style/generals';
 div{
+    text-transform: uppercase;
+    font-weight: lighter;
     text-align: center;
     width: calc(100% / 6 - 40px) ;
     color: $font-white;
@@ -26,6 +28,4 @@ img{
     object-fit: cover;
     object-position: top;
 }
-
-
 </style>

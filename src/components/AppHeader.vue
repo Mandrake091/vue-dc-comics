@@ -4,8 +4,9 @@
  <img alt="Dc logo" src="/images/dc-logo.png">
  <nav>
    <ul>
-     <li  
+     <li 
         v-for="(items, index) in link" 
+        @click="items.active = false? 'false' : items.active = true"
         :key="index" 
         :class="{'active' : items.active}"> {{items.testo}}
      </li>
@@ -19,7 +20,16 @@
 
 export default {
   name: 'AppHeader',
-  props:['link']
+  props:['link'],
+  methods:{
+     changeActive(){
+       console.log(this.index)
+      this.link.forEach(el => {
+        console.log(el.active)
+      })
+      
+     }
+  }  
 }
 
 </script>
@@ -38,11 +48,18 @@ header{
   font-size: $main-font-size;
 }
 li{
+  cursor: pointer;
   padding: 0 15px;
   text-transform: uppercase ;
   line-height: 100px;
   list-style: none;
   float: left;
+&.active {
+  border-bottom:5px solid $bg-active;
+  }
+  &:hover{
+  text-decoration: underline;
+}
 }
 img{
   margin: 15px 0;
@@ -50,8 +67,6 @@ img{
   float: left;
 }
 
-.active {
-  background-color: $bg-active;
-}
+
 
 </style>

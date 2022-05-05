@@ -88,6 +88,7 @@ export default {
           active: false
         }
       ],
+      activeIndex:0,
       FooterImages:[
           {
           testo:"facebook",

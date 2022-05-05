@@ -1,8 +1,9 @@
 <template>
-<div>
-    <div class="grid">
+<div class="text-center">
+    <div class="grid ">
         <app-card v-for="(card, index) in items" :thumb="card.thumb" :series="card.series" :type="card.type" :key="index"/>
-    </div>  
+    </div> 
+    <button class="btn m-">load more</button> 
  </div>  
 </template>
 
@@ -89,7 +90,7 @@ export default {
         "type": "graphic novel"
     }
     ]
-        }
+    }
     } 
 }
 
@@ -105,13 +106,19 @@ export default {
     justify-content: center;
     display: flex;  
     flex-wrap: wrap;
-    padding: 100px 0;
+    padding-top: 50px;
     row-gap: 20px;
     column-gap: 25px;
-  
+}
+.btn{
+    padding: 10px 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $font-white;
+    background-color: $bg-active;
 }
 div:first-child{
-      background-color: $bg-light-black; 
+    background-color: $bg-light-black; 
 }
 
 
