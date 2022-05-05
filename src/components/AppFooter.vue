@@ -2,7 +2,7 @@
 
 <footer>
 
-  <img src="../assets/images/dc-logo-bg.png" alt="">
+  <img src="/images/dc-logo-bg.png" alt="">
   <article>
   <ul>
     <h3>dc comics</h3>
@@ -15,8 +15,6 @@
     <li>Shop DC Collectibles</li>  
     </ul>
   </ul>
-
-    
 
   <ul>
      <h3>dc</h3>
@@ -44,14 +42,13 @@
   </article>
   <div>
     <section>
-
         <button>
           sign-up now!
         </button>
 
        <div class="follow">
           <h3>follow us</h3>
-          <div v-for="(img, index) in images" :key="index">
+          <div v-for="(img, index) in imgs" :key="index">
           <img :src="img.link" alt="">
         </div>
         
@@ -67,30 +64,9 @@
 
 export default {
   name: 'AppFooter',
+  props:['imgs'],
   data(){
     return{
-      images:[
-          {
-          testo:"facebook",
-          link:require('../assets/images/footer-facebook.png')
-          },
-          {
-          testo:"twitter",
-          link:require('../assets/images/footer-twitter.png')
-          },
-          {
-          testo:"youtube",
-          link:require('../assets/images/footer-youtube.png')
-          },
-          {
-          testo:"pinterest",
-          link:require('../assets/images/footer-pinterest.png')
-          },
-          {
-          testo:"periscope",
-          link:require('../assets/images/footer-periscope.png')
-          },
-      ],
       lists:[
         {
           testo:"characters",
@@ -140,7 +116,7 @@ export default {
 
 footer{
     position: relative;
-    background-image: url(../assets/images/footer-bg.jpg);
+    background-image: url('/public/images/footer-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -1,11 +1,11 @@
 <template>
 
 <header>
- <img alt="Vue logo" src="../assets/images/dc-logo.png">
+ <img alt="Dc logo" src="/images/dc-logo.png">
  <nav>
    <ul>
      <li  
-        v-for="(items, index) in links" 
+        v-for="(items, index) in link" 
         :key="index" 
         :class="{'active' : items.active}"> {{items.testo}}
      </li>
@@ -19,63 +19,9 @@
 
 export default {
   name: 'AppHeader',
-  data(){
-    return{
-      links:[
-        {
-          testo:"characters",
-          link:"",
-          active: false
-        },
-        {
-          testo:"comics",
-          link:"",
-          active: true
-        },
-        {
-          testo:"movies",
-          link:"",
-          active: false
-        },
-        {
-          testo:"tv",
-          link:"",
-          active: false
-        },
-        {
-          testo:"games",
-          link:"",
-          active: false
-        },
-        {
-          testo:"collectibles",
-          link:"",
-          active: false
-        },
-        {
-          testo:"videos",
-          link:"",
-          active: false
-        },
-        {
-          testo:"fans",
-          link:"",
-          active: false
-        },
-        {
-          testo:"news",
-          link:"",
-          active: false
-        },
-        {
-          testo:"shop",
-          link:"",
-          active: false
-        }
-      ]
-    }
-  }
+  props:['link']
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -84,25 +30,23 @@ export default {
 @import '../style/generals';
 
 header{
+  justify-content: space-between;
+  display: flex;
   width: $width;
   margin: 0 auto;
   font-weight:600;
   font-size: $main-font-size;
-  height: $line-height;
-}
-ul{
-  float: right;
 }
 li{
   padding: 0 15px;
   text-transform: uppercase ;
-  line-height: $line-height;
+  line-height: 100px;
   list-style: none;
   float: left;
 }
 img{
   margin: 15px 0;
-  height: 50px;
+  height: 70px;
   float: left;
 }
 
